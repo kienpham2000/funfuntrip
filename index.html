@@ -50,8 +50,8 @@
                         </a>
 
                     </li>
-                    <li data-theme="d">
-                        <a href="#page1" data-transition="slide">
+                    <li data-theme="d" id="kiwanis_li">
+                        <a href="#page_kiwanis" data-transition="slide">
                             Kiwanis Farmers Market <span class="right">$0</span>
                         </a>
                     </li>
@@ -89,13 +89,103 @@
                     </li>
 
                     <li>
-            <input type="submit" data-icon="search" data-iconpos="left" value="Rent A Car" data-mini="true" />
+                            <a data-role="button" data-theme="d" href="#page_book" data-icon="search" data-iconpos="left">
+                    Rent A Car
+                </a>
+
                     </li>
                 </ul>
 
 
             </div>
         </div>
+
+
+<div data-role="page" id="page_kiwanis">
+
+            <div data-role="content">
+                             <h3>
+                    Kiwanis Farmers Market <span class="right">$0</span>
+                </h3>
+                <img src="https://maps.googleapis.com/maps/api/staticmap?center=425 Broadway St  Redwood City, CA 94063&amp;zoom=14&amp;size=288x200&amp;markers=425 Broadway St  Redwood City, CA 94063&amp;sensor=false" width="288" height="200" />
+
+                <div data-role="navbar" data-iconpos="left" class="fixed-bottom">
+                    <ul>
+                        <li>
+                            <a href="#page1" data-transition="fade" data-theme="d" data-icon="arrow-l">
+                                Back
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page1" data-transition="fade" data-theme="d" data-icon="plus" id="going_kiwanis">
+                                Going
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+</div>
+
+
+<div data-role="page" id="page_book">
+
+            <div data-role="content">
+                             <h3>
+                    Select Location
+                </h3>
+
+                                <ul data-role="listview" data-divider-theme="d" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Hertz Locations near you
+                    </li>
+                    <li data-theme="d">
+                        <a href="#page1" data-transition="slide">
+                            99 Beech Street HLE
+                            <span class="ui-li-count">
+                                1 mile
+                            </span>
+                        </a>
+                    </li>
+                    <li data-theme="d">
+                        <a href="#page1" data-transition="slide">
+                            San Carlos Airport - Private Flights Only
+                            <span class="ui-li-count">
+                                2 miles
+                            </span>
+                        </a>
+                    </li>
+                    <li data-theme="d">
+                        <a href="#page1" data-transition="slide">
+                            Westin Palo Alto HLE
+                            <span class="ui-li-count">
+                                5 miles
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+
+
+
+
+                </div>
+                <div data-role="navbar" data-iconpos="left" class="fixed-bottom">
+                    <ul>
+                        <li>
+                            <a href="#page1" data-transition="fade" data-theme="d" data-icon="arrow-l">
+                                Back
+                            </a>
+
+                </div>
+
+
+</div>
+
+
+
+
+
+
 
         <div data-role="page" id="page_hertz">
 
@@ -128,6 +218,11 @@
             $("#going_hertz").click(function(){
 		      $("#hertz_li").buttonMarkup({icon: "check"})
             });
+
+            $("#going_kiwanis").click(function(){
+              $("#kiwanis_li").buttonMarkup({icon: "check"})
+            });
+
         </script>
     </body>
 </html>
