@@ -24,7 +24,7 @@
 
     $(function() {
 	$("#searchinput1").on("change", function(){
-		$("#events_list").show();
+		$(".page1_data").show();
 	});
     });
 
@@ -40,11 +40,11 @@
                 <div data-role="fieldcontain">
                     <input name="location" id="searchinput1" placeholder="Input Location" value="" type="search" data-mini="true" />
                 </div>
-                <ul id="events_list" style="display:none" data-role="listview" data-divider-theme="d" data-inset="true">
+                <ul class="page1_data" style="display:none" data-role="listview" data-divider-theme="d" data-inset="true">
                     <li data-role="list-divider" role="heading">
                         Events near Redwood City, CA
                     </li>
-                    <li data-theme="d" id="hertz_li">
+                    <li data-theme="d" id="hertz_li" data-icon="check">
                         <a href="#page_hertz" data-transition="slide">
                             Hertz Hackathon <span class="right">$0</span>
                         </a>
@@ -87,7 +87,13 @@
                             Art on the Square... <span class="right">$5</span>
                         </a>
                     </li>
+
+                    <li>
+            <input type="submit" data-icon="search" data-iconpos="left" value="Rent A Car" data-mini="true" />
+                    </li>
                 </ul>
+
+
             </div>
         </div>
 
@@ -98,7 +104,8 @@
                     Hertz Hackathon <span class="right">$0</span>
                 </h3>
                 <img src="https://maps.googleapis.com/maps/api/staticmap?center=425 Broadway St  Redwood City, CA 94063&amp;zoom=14&amp;size=288x200&amp;markers=425 Broadway St  Redwood City, CA 94063&amp;sensor=false" width="288" height="200" />
-                <div data-role="navbar" data-iconpos="top">
+
+                <div data-role="navbar" data-iconpos="left" class="fixed-bottom">
                     <ul>
                         <li>
                             <a href="#page1" data-transition="fade" data-theme="d" data-icon="arrow-l">
@@ -119,7 +126,7 @@
 
         <script>
             $("#going_hertz").click(function({
-                $("#hertz_li").live().attr("data-icon", "check");
+                $("#hertz_li").attr("data-icon", "check");
             }));
         </script>
     </body>
