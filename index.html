@@ -118,9 +118,9 @@
 
 
         <script>
-            $("#going_hertz").click(function({
-                $("#hertz_li").live().attr("data-icon", "check");
-            }));
+            $("#going_hertz").click(function(){
+		$("#hertz_li").buttonMarkup({icon: "check"})
+            });
         </script>
     </body>
 </html>
