@@ -5,8 +5,7 @@
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <title>
-        </title>
+        <title>FunFunTrip</title>
         <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
         <link rel="stylesheet" href="my.css" />
         <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js">
@@ -23,9 +22,22 @@
             try {
 
     $(function() {
-	$("#searchinput1").on("change", function(){
-		$(".page1_data").show();
-	});
+    	$("#searchinput1").on("change", function(){
+    		$(".page1_data").show();
+            $("#rent_button").show();
+    	});
+
+
+
+            $("#going_hertz").click(function(){
+              $("#hertz_li").buttonMarkup({icon: "check"})
+            });
+
+            $("#going_kiwanis").click(function(){
+              $("#kiwanis_li").buttonMarkup({icon: "check"})
+            });
+
+
     });
 
   } catch (error) {
@@ -88,13 +100,10 @@
                         </a>
                     </li>
 
-                    <li>
-                            <a data-role="button" data-theme="d" href="#page_book" data-icon="search" data-iconpos="left">
-                    Rent A Car
-                </a>
 
-                    </li>
                 </ul>
+
+                <a data-role="button" data-theme="d" href="#page_book" data-icon="search" data-iconpos="left" style="display:none" id="rent_button">Rent A Car</a>
 
 
             </div>
@@ -161,6 +170,39 @@
 
 </div>
 
+<div data-role="page" id="car2">
+
+            <div data-role="content">
+                             <h3>
+                    San Carlos Airport - Private Flights Only <span class="right">2 miles</span>
+                </h3>
+
+                <h4>San Carlos Airport - Private Flights Only</h4>
+
+                <p>620 Airport Drive<br />
+                    San Carlos (San Carlos) , California<br />
+                    United States<br />
+                    Phone: 650-361-0151
+                </p>
+
+                <div data-role="navbar" data-iconpos="left" class="fixed-bottom">
+                    <ul>
+                        <li>
+                            <a href="#page_book" data-transition="fade" data-theme="d" data-icon="arrow-l">
+                                Back
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page1" data-transition="fade" data-theme="d" data-icon="plus" id="going_kiwanis">
+                                Book
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+</div>
+
 
 <div data-role="page" id="page_book">
 
@@ -190,7 +232,7 @@
                         </a>
                     </li>
                     <li data-theme="d">
-                        <a href="#page1" data-transition="slide">
+                        <a href="#car3" data-transition="slide">
                             Westin Palo Alto HLE
                             <span class="ui-li-count">
                                 5 miles
@@ -248,15 +290,6 @@
         </div>
 
 
-        <script>
-            $("#going_hertz").click(function(){
-		      $("#hertz_li").buttonMarkup({icon: "check"})
-            });
 
-            $("#going_kiwanis").click(function(){
-              $("#kiwanis_li").buttonMarkup({icon: "check"})
-            });
-
-        </script>
     </body>
 </html>
