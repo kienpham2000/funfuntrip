@@ -23,7 +23,9 @@
             try {
 
     $(function() {
-
+	$("#searchinput1").on("change", function(){
+		$("#events_list").show();
+	});
     });
 
   } catch (error) {
@@ -38,7 +40,7 @@
                 <div data-role="fieldcontain">
                     <input name="location" id="searchinput1" placeholder="Input Location" value="" type="search" data-mini="true" />
                 </div>
-                <ul data-role="listview" data-divider-theme="d" data-inset="true">
+                <ul id="events_list" style="display:none" data-role="listview" data-divider-theme="d" data-inset="true">
                     <li data-role="list-divider" role="heading">
                         Events
                     </li>
