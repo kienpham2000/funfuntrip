@@ -337,14 +337,21 @@ class Pest_UnknownResponse extends Pest_Exception { }
 
 
 //echo '{"boarding":"2013-03-10T19:00:00.000-05:00","changed":null,"flight_status":"' . $flight_status . '","flight_number":"427","origin_code":"AUS","destination_code":"LAX","terminal":null,"gate":"13","aa_advantage":"' . $aa_advantage . '"}';
+$base_url = "https://stg-services.navsol.net/search/events/";
+
 $api = new Api($base_url);
-$location = 'Redwood City, CA 94063'
+$location = 'Redwood City, CA 94063';
 
 // Login
-$auth = 'Authorization=baa1378f-d810-4d56-978b-1ec5fe5ae45e'
+$auth = 'Authorization=baa1378f-d810-4d56-978b-1ec5fe5ae45e';
 $call = $auth;
 
 $result = $api->post($call);
+
+print_r($result);exit;
+
+
+
 $result = $api->get($call);
 
 $payload = array();
