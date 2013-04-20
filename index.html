@@ -44,7 +44,7 @@
                     <li data-role="list-divider" role="heading">
                         Events near Redwood City, CA
                     </li>
-                    <li data-theme="d">
+                    <li data-theme="d" id="hertz_li">
                         <a href="#page_hertz" data-transition="slide">
                             Hertz Hackathon <span class="right">$0</span>
                         </a>
@@ -76,8 +76,6 @@
                         </a>
                     </li>
 
-
-
                     <li data-theme="d">
                         <a href="#page1" data-transition="slide">
                             Kiwanis Farmers Market <span class="right">$5</span>
@@ -108,7 +106,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#page1" data-transition="fade" data-theme="d" data-icon="plus">
+                            <a href="#page1" data-transition="fade" data-theme="d" data-icon="plus" id="going_hertz">
                                 Going
                             </a>
                         </li>
@@ -119,5 +117,10 @@
         </div>
 
 
+        <script>
+            $("#going_hertz").click(function({
+                $("#hertz_li").live().attr("data-icon", "check");
+            }));
+        </script>
     </body>
 </html>
