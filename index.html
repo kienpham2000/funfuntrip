@@ -44,7 +44,7 @@
                     <li data-role="list-divider" role="heading">
                         Events near Redwood City, CA
                     </li>
-                    <li data-theme="d" id="hertz_li" data-icon="check">
+                    <li data-theme="d" id="hertz_li">
                         <a href="#page_hertz" data-transition="slide">
                             Hertz Hackathon <span class="right">$0</span>
                         </a>
@@ -125,9 +125,9 @@
 
 
         <script>
-            $("#going_hertz").click(function({
-                $("#hertz_li").attr("data-icon", "check");
-            }));
+            $("#going_hertz").click(function(){
+		      $("#hertz_li").buttonMarkup({icon: "check"})
+            });
         </script>
     </body>
 </html>
