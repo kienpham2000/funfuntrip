@@ -4,7 +4,7 @@ FunFunTrip
 
 Author:
 -------
-    Kien Pham
+    Kien Pham (@kienpham2000)
     Kane Kim
 
 How to run this app
